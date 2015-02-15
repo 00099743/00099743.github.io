@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script>
 // Created by Johan Bos portfolio website coming soon// 
 i = 0;
@@ -485,6 +486,7 @@ location.reload();
 </script>
 <style>
 .round-button {
+display: inline-block;
 	width:25%;
 }
 .round-button-circle {
@@ -517,50 +519,80 @@ location.reload();
     font-weight:bold;
     text-decoration:none;
 }
+#data
+{
+display: inline-block;
+float:right;
+padding-right: 10px;
+}
+
+#wrapper
+{
+display: inline-block;
+width:100%;
+padding-left: 10px;
+}
+#smaller
+{
+display: inline-block;
+width:75%;
+float:left;
+}
 </style>
 </head>
 
 <body>
-<h1>Just another click game created by Johan versie 1.2</h1>
-<h1>get to 1250000000000 score to win or buy a Johan to get a reward</h1>
+<div id="wrapper">
+<div id="smaller">
+<h1><span style="color:red">Just another click game </span> <small> created by Johan versie 1.3</small></h1>
+<h3>get to 1250000000000 score to win or buy a Johan to get a reward</h3>
 <br>
 <div class="round-button"><div class="round-button-circle" onclick="test()"><a class="round-button">Click here!!</a></div></div>
+
 <br>
 <h4><div id="message"></div></h4>
 <h4><div id="buyingmessage"></div></h4>
-<h4>Score:<div id="score">0</div></h4>
-<h4>Coins:<div id="coins">0</div></h4>
+<h4>Score:<span id="score">0</span></h4>
+<h4>Coins:<span id="coins">0</span></h4>
+</div>
+
+<div id="data">
 <h1>Workers</h1>
 
-<button onclick="buyworkers()">Buy workers 10 coins</button>
-<h4>Workers:<div id="workers"></div></h4>
 
-<button onclick="buyfactory()">Buy factory 100 coins</button>
-<h4>Factory:<div id="factory"></div></h4>
+<h4>Workers:<span id="workers"> 0</span></h4>
+<button class="btn btn-primary" onclick="buyworkers()">Buy workers 10 coins</button>
 
-<button onclick="buydamnation()">Buy Damnation 1000 coins</button>
-<h4>Damnation:<div id="damnation"></div></h4>
+<h4>Factory:<span id="factory"> 0</span></h4>
+<button class="btn btn-primary" onclick="buyfactory()">Buy factory 100 coins</button>
 
-<button onclick="buyworld_damnation()">Buy World Damnation 1500 coins</button>
-<h4>World Damnation:<div id="world_damnation"></div></h4>
+<h4>Damnation:<span id="damnation"> 0</span></h4>
+<button class="btn btn-primary" onclick="buydamnation()">Buy Damnation 1000 coins</button>
 
-<button onclick="buyuniversial_airstrike()">Buy Universial Airstrike 3000 coins</button>
-<h4>Universial Airstrike:<div id="universial_airstrike"></div></h4>
+<h4>World Damnation:<span id="world_damnation"> 0</span></h4>
+<button class="btn btn-primary" onclick="buyworld_damnation()">Buy World Damnation 1500 coins</button>
 
-<button onclick="buyearth()">Buy Earth 10000 coins</button>
-<h4>Earth:<div id="earth"></div></h4>
+<h4>Universial Airstrike:<span id="universial_airstrike"> 0</span></h4>
+<button class="btn btn-primary" onclick="buyuniversial_airstrike()">Buy Universial Airstrike 3000 coins</button>
 
-<button onclick="buyuniverse()">Buy Universe 50000 coins</button>
-<h4>Universe:<div id="universe"></div></h4>
+<h4>Earth:<span id="earth"> 0</span></h4>
+<button class="btn btn-primary" onclick="buyearth()">Buy Earth 10000 coins</button>
 
-<button onclick="buygrannie()">Buy Grannie 75000 coins</button>
-<h4>Grannie:<div id="grannie"></div></h4>
+<h4>Universe:<span id="universe"> 0</span></h4>
+<button class="btn btn-primary" onclick="buyuniverse()">Buy Universe 50000 coins</button>
 
-<button onclick="buypaapa()">Buy Paapa 100000 coins</button>
-<h4>Paapa:<div id="paapa"></div></h4>
+<h4>Grannie:<span id="grannie"> 0</span></h4>
+<button class="btn btn-primary" onclick="buygrannie()">Buy Grannie 75000 coins</button>
 
-<button onclick="buyjohan()">Buy Johan 1000000000000 coins</button>
-<h4>Johan The Almighty ONE:<div id="johan"></div></h4>
+
+<h4>Paapa:<span id="paapa"> 0</span></h4>
+<button class="btn btn-primary" onclick="buypaapa()">Buy Paapa 100000 coins</button>
+
+
+<h4>Johan The Almighty ONE:<span id="johan"> 0</span></h4>
+<button class="btn btn-success" onclick="buyjohan()">Buy Johan 1000000000000 coins</button>
+</div>
+</div>
 </body>
 
 
