@@ -7,6 +7,14 @@ coins = 0;
 workers = 0;
 factory = 0;
 damnation = 0;
+world_damnation = 0;
+universial_airstrike = 0;
+earth = 0;
+universe = 0;
+grannie = 0;
+paapa = 0;
+johan = 0;
+
 function test(){
 i++;
 coins++;
@@ -25,9 +33,14 @@ else if(i > 500 && i < 1000)
 {
 document.getElementById("message").innerHTML = "You should just stop now";
 }
-else if(i > 1000 && i < 999999999999999999)
+else if(i > 1000 && i < 1249999999999)
 {
 document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
 }
 }
 
@@ -82,13 +95,132 @@ document.getElementById("damnation").innerHTML = damnation;
 
 }
 
+function buyworld_damnation(){
+if(coins > 1499)
+{
+	document.getElementById("buyingmessage").innerHTML = "You bought one world damnation";
+	world_damnation++;
+	coins -= 1500 ;
+}
+else 
+{
+ alert("you dont have enought cash");
+}
+
+document.getElementById("coins").innerHTML = coins;
+document.getElementById("world_damnation").innerHTML = world_damnation;
+
+}
+
+function buyuniversial_airstrike(){
+if(coins > 2999)
+{
+	document.getElementById("buyingmessage").innerHTML = "You bought one Universial Airstrike";
+	universial_airstrike++;
+	coins -= 3000 ;
+}
+else 
+{
+ alert("you dont have enought cash");
+}
+
+document.getElementById("coins").innerHTML = coins;
+document.getElementById("universial_airstrike").innerHTML = universial_airstrike;
+
+}
+
+function buyearth(){
+if(coins > 9999)
+{
+	document.getElementById("buyingmessage").innerHTML = "You bought one Earth";
+	earth++;
+	coins -= 10000 ;
+}
+else 
+{
+ alert("you dont have enought cash");
+}
+
+document.getElementById("coins").innerHTML = coins;
+document.getElementById("earth").innerHTML = earth;
+
+}
+
+function buyuniverse(){
+if(coins > 49999)
+{
+	document.getElementById("buyingmessage").innerHTML = "You bought one Universe";
+	universe++;
+	coins -= 50000 ;
+}
+else 
+{
+ alert("you dont have enought cash");
+}
+
+document.getElementById("coins").innerHTML = coins;
+document.getElementById("universe").innerHTML = universe;
+
+}
+
+function buygrannie(){
+if(coins > 74999)
+{
+	document.getElementById("buyingmessage").innerHTML = "You bought one Grannie";
+	grannie++;
+	coins -= 75000 ;
+}
+else 
+{
+ alert("you dont have enought cash");
+}
+
+document.getElementById("coins").innerHTML = coins;
+document.getElementById("grannie").innerHTML = grannie;
+
+}
+
+function buypaapa(){
+if(coins > 99999)
+{
+	document.getElementById("buyingmessage").innerHTML = "You bought one Paapa";
+	paapa++;
+	coins -= 100000;
+	
+}
+else 
+{
+ alert("you dont have enought cash");
+}
+
+document.getElementById("coins").innerHTML = coins;
+document.getElementById("paapa").innerHTML = paapa;
+
+}
+
+function buyjohan(){
+if(coins > 1000000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+else 
+{
+ alert("you dont have enought cash");
+}
+
+document.getElementById("coins").innerHTML = coins;
+
+
+}
+
 setInterval(function() {
       i += workers; 
 	  coins += workers; 
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
 	  
-	  if(i > 10 && i < 100)
+if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
 }
@@ -100,11 +232,16 @@ else if(i > 500 && i < 1000)
 {
 document.getElementById("message").innerHTML = "You should just stop now";
 }
-else if(i > 1000 && i < 999999999999999999)
+else if(i > 1000 && i < 1249999999999)
 {
 document.getElementById("message").innerHTML = "You got no live";
 }
-}, 5000);
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+}, 30000);
 
 setInterval(function() {
 	  i += factory; 
@@ -112,7 +249,7 @@ setInterval(function() {
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
 	  
-	  if(i > 10 && i < 100)
+if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
 }
@@ -124,11 +261,16 @@ else if(i > 500 && i < 1000)
 {
 document.getElementById("message").innerHTML = "You should just stop now";
 }
-else if(i > 1000 && i < 999999999999999999)
+else if(i > 1000 && i < 1249999999999)
 {
 document.getElementById("message").innerHTML = "You got no live";
 }
-}, 3000);
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+}, 29000);
 
 setInterval(function() {
 	  i += damnation; 
@@ -147,11 +289,198 @@ else if(i > 500 && i < 1000)
 {
 document.getElementById("message").innerHTML = "You should just stop now";
 }
-else if(i > 1000 && i < 999999999999999999)
+else if(i > 1000 && i < 1249999999999)
 {
 document.getElementById("message").innerHTML = "You got no live";
 }
-}, 1000);
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+	 
+}, 28000);
+
+setInterval(function() {
+	  i += world_damnation; 
+	  coins += world_damnation; 
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+	  }, 22000);
+
+setInterval(function() {
+	  i += universial_airstrike; 
+	  coins += universial_airstrike; 
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+	 
+}, 20000);
+
+setInterval(function() {
+	  i += earth; 
+	  coins += earth; 
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+	
+}, 18000);
+
+setInterval(function() {
+	  i += universe; 
+	  coins += universe; 
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+	  
+}, 15000);
+
+setInterval(function() {
+	  i += grannie; 
+	  coins += grannie; 
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+	
+}, 12000);
+
+setInterval(function() {
+	  i += paapa; 
+	  coins += paapa; 
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+	  
+}, 10000);
+
+
 
 </script>
 <style>
@@ -192,7 +521,8 @@ document.getElementById("message").innerHTML = "You got no live";
 </head>
 
 <body>
-<h1>Just another click game created by Johan</h1>
+<h1>Just another click game created by Johan versie 1.2</h1>
+<h1>get to 1250000000000 score to win or buy a Johan to get a reward</h1>
 <br>
 <div class="round-button"><div class="round-button-circle" onclick="test()"><a class="round-button">Click here!!</a></div></div>
 <br>
@@ -201,12 +531,36 @@ document.getElementById("message").innerHTML = "You got no live";
 <h4>Score:<div id="score">0</div></h4>
 <h4>Coins:<div id="coins">0</div></h4>
 <h1>Workers</h1>
+
 <button onclick="buyworkers()">Buy workers 10 coins</button>
 <h4>Workers:<div id="workers"></div></h4>
+
 <button onclick="buyfactory()">Buy factory 100 coins</button>
 <h4>Factory:<div id="factory"></div></h4>
+
 <button onclick="buydamnation()">Buy Damnation 1000 coins</button>
 <h4>Damnation:<div id="damnation"></div></h4>
+
+<button onclick="buyworld_damnation()">Buy World Damnation 1500 coins</button>
+<h4>World Damnation:<div id="world_damnation"></div></h4>
+
+<button onclick="buyuniversial_airstrike()">Buy Universial Airstrike 3000 coins</button>
+<h4>Universial Airstrike:<div id="universial_airstrike"></div></h4>
+
+<button onclick="buyearth()">Buy Earth 10000 coins</button>
+<h4>Earth:<div id="earth"></div></h4>
+
+<button onclick="buyuniverse()">Buy Universe 50000 coins</button>
+<h4>Universe:<div id="universe"></div></h4>
+
+<button onclick="buygrannie()">Buy Grannie 75000 coins</button>
+<h4>Grannie:<div id="grannie"></div></h4>
+
+<button onclick="buypaapa()">Buy Paapa 100000 coins</button>
+<h4>Paapa:<div id="paapa"></div></h4>
+
+<button onclick="buyjohan()">Buy Johan 1000000000000 coins</button>
+<h4>Johan The Almighty ONE:<div id="johan"></div></h4>
 </body>
 
 
