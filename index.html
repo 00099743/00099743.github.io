@@ -16,11 +16,27 @@ grannie = 0;
 paapa = 0;
 johan = 0;
 
+//progress 
+scoreprogress = 0;
+workerprogress = 0;
+factoryprogress = 0;
+damnationprogress = 0;
+world_damnationprogress = 0;
+universial_airstrikeprogress = 0;
+earthprogress = 0;
+universeprogress = 0;
+grannieprogress = 0;
+paapaprogress = 0;
+johanprogress = 0;
+
+
 function test(){
 i++;
 coins++;
 document.getElementById("coins").innerHTML = coins ;
 document.getElementById("score").innerHTML = i;
+scoreprogress ++;
+document.getElementById("scoreprogress").value = scoreprogress;
 
 if(i > 10 && i < 100)
 {
@@ -215,13 +231,22 @@ document.getElementById("coins").innerHTML = coins;
 
 }
 
+
+//Progress workers//
 setInterval(function() {
-      i += workers; 
+if(workers >= 1)
+{
+	  workerprogress++;
+	  document.getElementById("progressworkers").value = workerprogress;
+	 if (workerprogress === 100)
+	  {
+	  i += workers; 
 	  coins += workers; 
+	  scoreprogress += workers;
+document.getElementById("scoreprogress").value = scoreprogress;
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  
-if(i > 10 && i < 100)
+	  if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
 }
@@ -242,40 +267,28 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
-}, 30000);
 
+	  workerprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 300); 
+
+//Progress Factory//
 setInterval(function() {
+if(factory >= 1)
+{
+	  factoryprogress++;
+	  document.getElementById("factoryworkers").value = factoryprogress;
+	 
+	  if (factoryprogress === 100)
+	  {
 	  i += factory; 
 	  coins += factory; 
-	  document.getElementById("score").innerHTML = i;
-	  document.getElementById("coins").innerHTML = coins;
-	  
-if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
-}, 29000);
-
-setInterval(function() {
-	  i += damnation; 
-	  coins += damnation; 
+	   scoreprogress += factory;
+document.getElementById("scoreprogress").value = scoreprogress;
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
 	  if(i > 10 && i < 100)
@@ -299,15 +312,74 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
-	 
-}, 28000);
 
+	  factoryprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 290); 
+
+//progress damnation
 setInterval(function() {
+if(damnation >= 1)
+{
+	  damnationprogress++;
+	  document.getElementById("damnationworkers").value = damnationprogress;
+	 
+	  if (damnationprogress === 100)
+	  {
+	  i += damnation; 
+	  coins += damnation;
+		scoreprogress += damnation;
+		document.getElementById("scoreprogress").value = scoreprogress; 
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+
+	  damnationprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 280); //progress damnation
+
+//progress world_damnation
+setInterval(function() {
+if(world_damnation >= 1)
+{
+	  world_damnationprogress++;
+	  document.getElementById("world_damnationworkers").value = world_damnationprogress;
+	  if (world_damnationprogress === 100)
+	  {
 	  i += world_damnation; 
 	  coins += world_damnation; 
+	  scoreprogress += world_damnation;
+		document.getElementById("scoreprogress").value = scoreprogress;
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  
 	  if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
@@ -329,14 +401,74 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
-	  }, 22000);
 
+	  world_damnationprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 220); 
+
+//progress world_damnation
 setInterval(function() {
+if(world_damnation >= 1)
+{
+	  world_damnationprogress++;
+	  document.getElementById("world_damnationworkers").value = world_damnationprogress;
+	  
+	  if (world_damnationprogress === 100)
+	  {
+	  i += world_damnation; 
+	  coins += world_damnation; 
+	  scoreprogress += world_damnation;
+	  document.getElementById("scoreprogress").value = scoreprogress;
+	  document.getElementById("score").innerHTML = i;
+	  document.getElementById("coins").innerHTML = coins;
+	  if(i > 10 && i < 100)
+{
+document.getElementById("message").innerHTML = "You are right on Track";
+}
+else if(i > 100 && i < 500)
+{
+document.getElementById("message").innerHTML = "Are you done yet";
+}
+else if(i > 500 && i < 1000)
+{
+document.getElementById("message").innerHTML = "You should just stop now";
+}
+else if(i > 1000 && i < 1249999999999)
+{
+document.getElementById("message").innerHTML = "You got no live";
+}
+else if(i === 1250000000000)
+{
+alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
+location.reload();
+}
+
+	  world_damnationprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 220); 
+
+//progress universial_airstrike
+setInterval(function() {
+if(universial_airstrike >= 1)
+{
+	  universial_airstrikeprogress++;
+	  document.getElementById("universial_airstrikenworkers").value = universial_airstrikeprogress;
+	if (universial_airstrikeprogress === 100)
+	  {
 	  i += universial_airstrike; 
-	  coins += universial_airstrike; 
+	  coins += universial_airstrike;
+scoreprogress += universial_airstrike;
+	  document.getElementById("scoreprogress").value = scoreprogress;	  
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  
 	  if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
@@ -358,15 +490,30 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
-	 
-}, 20000);
 
+	  universial_airstrikeprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 200);
+
+//progress earth
 setInterval(function() {
+if(earth >= 1)
+{
+	  earthprogress++;
+	  document.getElementById("earthworkers").value = earthprogress;
+	
+	  if (earthprogress === 100)
+	  {
 	  i += earth; 
 	  coins += earth; 
+	  scoreprogress += earth;
+	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  
 	  if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
@@ -388,15 +535,30 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
-	
-}, 18000);
 
+	  earthprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 180); 
+
+//progress universe
 setInterval(function() {
+if(universe >= 1)
+{
+	  universeprogress++;
+	  document.getElementById("universeworkers").value = universeprogress;
+	 
+	  if (universeprogress === 100)
+	  {
 	  i += universe; 
 	  coins += universe; 
+	  scoreprogress += universe;
+	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  
 	  if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
@@ -418,15 +580,30 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
-	  
-}, 15000);
 
+	  universeprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 150); 
+
+//progress grannie
 setInterval(function() {
+if(grannie >= 1)
+{
+	  grannieprogress++;
+	  document.getElementById("grannieworkers").value = grannieprogress;
+	
+	  if (grannieprogress === 100)
+	  {
 	  i += grannie; 
 	  coins += grannie; 
+	  scoreprogress += grannie;
+	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  
 	  if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
@@ -448,15 +625,30 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
-	
-}, 12000);
 
+	  grannieprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 120); 
+
+//progress paapa
 setInterval(function() {
+if(paapa >= 1)
+{
+	  paapaprogress++;
+	  document.getElementById("paapaworkers").value = paapaprogress;
+	
+	  if (paapaprogress === 100)
+	  {
 	  i += paapa; 
 	  coins += paapa; 
+	  scoreprogress += paapa;
+	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  
 	  if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
@@ -478,8 +670,17 @@ else if(i === 1250000000000)
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
+
+	  paapaprogress = 0;	  
+	 }
+}
 	  
-}, 10000);
+
+	  
+}, 100); 
+
+
+
 
 
 
@@ -552,6 +753,7 @@ float:left;
 <br>
 <h4><div id="message"></div></h4>
 <h4><div id="buyingmessage"></div></h4>
+<h4>Game progress: <progress id="scoreprogress" value="0" max="1250000000000"></progress></h4>
 <h4>Score:<span id="score">0</span></h4>
 <h4>Coins:<span id="coins">0</span></h4>
 </div>
@@ -559,35 +761,68 @@ float:left;
 <div id="data">
 <h1>Workers</h1>
 
-
+<progress id="progressworkers" value="0" max="100"></progress>
+<br>
 <h4>Workers:<span id="workers"> 0</span></h4>
 <button class="btn btn-primary" onclick="buyworkers()">Buy workers 10 coins</button>
+
+<br><br>
+<progress id="factoryworkers" value="0" max="100"></progress>
+<br>
 
 <h4>Factory:<span id="factory"> 0</span></h4>
 <button class="btn btn-primary" onclick="buyfactory()">Buy factory 100 coins</button>
 
+<br><br>
+<progress id="damnationworkers" value="0" max="100"></progress>
+<br>
+
 <h4>Damnation:<span id="damnation"> 0</span></h4>
 <button class="btn btn-primary" onclick="buydamnation()">Buy Damnation 1000 coins</button>
+
+<br><br>
+<progress id="world_damnationworkers" value="0" max="100"></progress>
+<br>
 
 <h4>World Damnation:<span id="world_damnation"> 0</span></h4>
 <button class="btn btn-primary" onclick="buyworld_damnation()">Buy World Damnation 1500 coins</button>
 
+<br><br>
+<progress id="universial_airstrikenworkers" value="0" max="100"></progress>
+<br>
+
 <h4>Universial Airstrike:<span id="universial_airstrike"> 0</span></h4>
 <button class="btn btn-primary" onclick="buyuniversial_airstrike()">Buy Universial Airstrike 3000 coins</button>
+
+<br><br>
+<progress id="earthworkers" value="0" max="100"></progress>
+<br>
 
 <h4>Earth:<span id="earth"> 0</span></h4>
 <button class="btn btn-primary" onclick="buyearth()">Buy Earth 10000 coins</button>
 
+<br><br>
+<progress id="universeworkers" value="0" max="100"></progress>
+<br>
+
 <h4>Universe:<span id="universe"> 0</span></h4>
 <button class="btn btn-primary" onclick="buyuniverse()">Buy Universe 50000 coins</button>
+
+<br><br>
+<progress id="grannieworkers" value="0" max="100"></progress>
+<br>
 
 <h4>Grannie:<span id="grannie"> 0</span></h4>
 <button class="btn btn-primary" onclick="buygrannie()">Buy Grannie 75000 coins</button>
 
+<br><br>
+<progress id="paapaworkers" value="0" max="100"></progress>
+<br>
 
 <h4>Paapa:<span id="paapa"> 0</span></h4>
 <button class="btn btn-primary" onclick="buypaapa()">Buy Paapa 100000 coins</button>
 
+<br>
 
 <h4>Johan The Almighty ONE:<span id="johan"> 0</span></h4>
 <button class="btn btn-success" onclick="buyjohan()">Buy Johan 1000000000000 coins</button>
