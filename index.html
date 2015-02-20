@@ -30,7 +30,7 @@ paapaprogress = 0;
 johanprogress = 0;
 
 
-function test(){
+function klik(){
 i++;
 coins++;
 document.getElementById("coins").innerHTML = coins ;
@@ -38,27 +38,10 @@ document.getElementById("score").innerHTML = i;
 scoreprogress ++;
 document.getElementById("scoreprogress").value = scoreprogress;
 
-if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+achievement_score(i);
+message(i);
+
+
 }
 
 function buyworkers(){
@@ -67,6 +50,53 @@ if(coins > 9)
 	document.getElementById("buyingmessage").innerHTML = "You bought one worker";
 	workers++;
 	coins -= 10 ;
+	
+//Achievement for workers	
+	if(workers === 1)
+	{
+	check_worker_1 = 0
+	document.getElementById("Worker_Achievement_1").innerHTML = "Gained a friend";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_worker_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Gained a friend";
+	check_worker_1++
+	}
+	else if(check_worker_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_worker_1++
+
+	}
+	}, 1000); 
+
+	}
+	//Worker achievement 1000
+		if(workers === 1000)
+	{
+	check_worker_2 = 0
+	document.getElementById("Worker_Achievement_2").innerHTML = "Slave trader";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_worker_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Slave trader";
+	check_worker_2++
+	}
+	else if(check_worker_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_worker_2++
+
+	}
+	}, 1000); 
+
+}
+
+
 }
 else 
 {
@@ -84,6 +114,51 @@ if(coins > 99)
 	document.getElementById("buyingmessage").innerHTML = "You bought one factory";
 	factory++;
 	coins -= 100 ;
+	
+	//Achievement for factory	
+	if(factory === 1)
+	{
+	check_factory_1 = 0
+	document.getElementById("Factory_Achievement_1").innerHTML = "Nature Calls";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_factory_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Nature Calls";
+	check_factory_1++
+	}
+	else if(check_factory_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_factory_1++
+
+	}
+	}, 1000); 
+
+	}
+	//factory achievement 1000
+		if(factory === 1000)
+	{
+	check_factory_2 = 0
+	document.getElementById("Factory_Achievement_2").innerHTML = "Tree killer";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_factory_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Tree killer";
+	check_factory_2++
+	}
+	else if(check_factory_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_factory_2++
+
+	}
+	}, 1000); 
+
+}
 }
 else 
 {
@@ -101,6 +176,51 @@ if(coins > 999)
 	document.getElementById("buyingmessage").innerHTML = "You bought one damnation";
 	damnation++;
 	coins -= 1000 ;
+	
+	//Achievement for damnation	
+	if(damnation === 1)
+	{
+	check_damnation_1 = 0
+	document.getElementById("Damnation_Achievement_1").innerHTML = "Building a Nation";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_damnation_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Building a Nation";
+	check_damnation_1++
+	}
+	else if(check_damnation_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_damnation_1++
+
+	}
+	}, 1000); 
+
+	}
+	//Damnation achievement 1000
+		if(damnation === 1000)
+	{
+	check_damnation_2 = 0
+	document.getElementById("Damnation_Achievement_2").innerHTML = "Nation Destroyer";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_damnation_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Nation Destroyer";
+	check_damnation_2++
+	}
+	else if(check_damnation_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_damnation_2++
+
+	}
+	}, 1000); 
+
+}
 }
 else 
 {
@@ -118,6 +238,51 @@ if(coins > 1499)
 	document.getElementById("buyingmessage").innerHTML = "You bought one world damnation";
 	world_damnation++;
 	coins -= 1500 ;
+	
+	//Achievement for world_damnation	
+	if(world_damnation === 1)
+	{
+	world_damnation_check_1 = 0
+	document.getElementById("World_Damnation_Achievement_1").innerHTML = "The Kingdom";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(world_damnation_check_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "The Kingdom";
+	world_damnation_check_1++
+	}
+	else if(world_damnation_check_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	world_damnation_check_1++
+
+	}
+	}, 1000); 
+
+	}
+	//world_damnation achievement 1000
+		if(world_damnation === 1000)
+	{
+	check_world_damnation_2 = 0
+	document.getElementById("World_Damnation_Achievement_1").innerHTML = "No world left";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_world_damnation_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "No world left";
+	check_world_damnation_2++
+	}
+	else if(check_world_damnation_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_world_damnation_2++
+
+	}
+	}, 1000); 
+
+}
 }
 else 
 {
@@ -135,6 +300,50 @@ if(coins > 2999)
 	document.getElementById("buyingmessage").innerHTML = "You bought one Universial Airstrike";
 	universial_airstrike++;
 	coins -= 3000 ;
+	//Achievement for Universial Airstrike	
+	if(universial_airstrike === 1)
+	{
+	check_universial_airstrike_1 = 0
+	document.getElementById("Universial_Airstrike_Achievement_1").innerHTML = "Doomed from the start";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_universial_airstrike_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Doomed from the start";
+	check_universial_airstrike_1++
+	}
+	else if(check_universial_airstrike_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_universial_airstrike_1++
+
+	}
+	}, 1000); 
+
+	}
+	//universial airstrike achievement 1000
+		if(universial_airstrike === 1000)
+	{
+	check_universial_airstrike_2 = 0
+	document.getElementById("Universial_Airstrike_Achievement_2").innerHTML = "You doomed us all";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_universial_airstrike_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "You doomed us all";
+	check_universial_airstrike_2++
+	}
+	else if(check_universial_airstrike_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_universial_airstrike_2++
+
+	}
+	}, 1000); 
+
+}
 }
 else 
 {
@@ -152,6 +361,50 @@ if(coins > 9999)
 	document.getElementById("buyingmessage").innerHTML = "You bought one Earth";
 	earth++;
 	coins -= 10000 ;
+	//Achievement for earth	
+	if(earth === 1)
+	{
+	check_earth_1 = 0
+	document.getElementById("Earth_Achievement_1").innerHTML = "You got your own pet earth";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_earth_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "You got your own pet earth";
+	check_earth_1++
+	}
+	else if(check_earth_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_earth_1++
+
+	}
+	}, 1000); 
+
+	}
+	//earth achievement 1000
+		if(earth === 1000)
+	{
+	check_earth_2 = 0
+	document.getElementById("Earth_Achievement_2").innerHTML = "Earth is yours";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_earth_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Earth is yours";
+	check_earth_2++
+	}
+	else if(check_earth_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_earth_2++
+
+	}
+	}, 1000); 
+
+}
 }
 else 
 {
@@ -169,6 +422,50 @@ if(coins > 49999)
 	document.getElementById("buyingmessage").innerHTML = "You bought one Universe";
 	universe++;
 	coins -= 50000 ;
+	//Achievement for universe	
+	if(universe === 1)
+	{
+	check_universe_1 = 0
+	document.getElementById("Universe_Achievement_1").innerHTML = "The Universe as we know it";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_universe_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "The Universe as we know it";
+	check_universe_1++
+	}
+	else if(check_universe_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_universe_1++
+
+	}
+	}, 1000); 
+
+	}
+	//universe achievement 1000
+		if(universe === 1000)
+	{
+	check_universe_2 = 0
+	document.getElementById("Universe_Achievement_2").innerHTML = "Universe Achievement i know right lame ";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_factory_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Universe Achievement i know right lame ";
+	check_factory_2++
+	}
+	else if(check_factory_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_factory_2++
+
+	}
+	}, 1000); 
+
+}
 }
 else 
 {
@@ -186,6 +483,50 @@ if(coins > 74999)
 	document.getElementById("buyingmessage").innerHTML = "You bought one Grannie";
 	grannie++;
 	coins -= 75000 ;
+	//Achievement for grannie	
+	if(grannie === 1)
+	{
+	check_grannie_1 = 0
+	document.getElementById("Grannie_Achievement_1").innerHTML = "Grannie is your father";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_grannie_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Grannie is your father";
+	check_grannie_1++
+	}
+	else if(check_grannie_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_grannie_1++
+
+	}
+	}, 1000); 
+
+	}
+	//factory achievement 1000
+		if(grannie === 1000)
+	{
+	check_grannie_2 = 0
+	document.getElementById("Grannie_Achievement_2").innerHTML = "Grannie is your mother";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_grannie_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Tree killer";
+	check_grannie_2++
+	}
+	else if(check_grannie_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_grannie_2++
+
+	}
+	}, 1000); 
+
+}
 }
 else 
 {
@@ -203,6 +544,50 @@ if(coins > 99999)
 	document.getElementById("buyingmessage").innerHTML = "You bought one Paapa";
 	paapa++;
 	coins -= 100000;
+	//Achievement for paapa	
+	if(paapa === 1)
+	{
+	check_paapa_1 = 0
+	document.getElementById("Paapa_Achievement_1").innerHTML = "Nearly there";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_paapa_1 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Nature Calls";
+	check_paapa_1++
+	}
+	else if(check_paapa_1 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_paapa_1++
+
+	}
+	}, 1000); 
+
+	}
+	//factory achievement 1000
+		if(Paapa === 1000)
+	{
+    check_paapa_2 = 0
+	document.getElementById("Paapa_Achievement_2").innerHTML = "Paapa is the last one left ";
+	document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+	setInterval(function() {
+
+	if(check_paapa_2 === 0)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "Paapa is the last one left";
+	check_paapa_2++
+	}
+	else if(check_paapa_2 === 1)
+	{
+	document.getElementById("AchievementUnlocked").innerHTML = "";
+	check_paapa_2++
+
+	}
+	}, 1000); 
+
+}
 	
 }
 else 
@@ -244,29 +629,10 @@ if(workers >= 1)
 	  coins += workers; 
 	  scoreprogress += workers;
 document.getElementById("scoreprogress").value = scoreprogress;
+achievement_score(i);
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+	  message(i);
 
 	  workerprogress = 0;	  
 	 }
@@ -289,29 +655,10 @@ if(factory >= 1)
 	  coins += factory; 
 	   scoreprogress += factory;
 document.getElementById("scoreprogress").value = scoreprogress;
+achievement_score(i);
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+	  message(i);
 
 	  factoryprogress = 0;	  
 	 }
@@ -333,30 +680,11 @@ if(damnation >= 1)
 	  i += damnation; 
 	  coins += damnation;
 		scoreprogress += damnation;
+		achievement_score(i);
 		document.getElementById("scoreprogress").value = scoreprogress; 
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+	  message(i);
 
 	  damnationprogress = 0;	  
 	 }
@@ -377,30 +705,11 @@ if(world_damnation >= 1)
 	  i += world_damnation; 
 	  coins += world_damnation; 
 	  scoreprogress += world_damnation;
+	  achievement_score(i);
 		document.getElementById("scoreprogress").value = scoreprogress;
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+	  message(i);
 
 	  world_damnationprogress = 0;	  
 	 }
@@ -422,30 +731,11 @@ if(world_damnation >= 1)
 	  i += world_damnation; 
 	  coins += world_damnation; 
 	  scoreprogress += world_damnation;
+	  achievement_score(i);
 	  document.getElementById("scoreprogress").value = scoreprogress;
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+	  message(i);
 
 	  world_damnationprogress = 0;	  
 	 }
@@ -466,31 +756,12 @@ if(universial_airstrike >= 1)
 	  i += universial_airstrike; 
 	  coins += universial_airstrike;
 scoreprogress += universial_airstrike;
+achievement_score(i);
 	  document.getElementById("scoreprogress").value = scoreprogress;	  
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
-
+	  message(i);
+	 
 	  universial_airstrikeprogress = 0;	  
 	 }
 }
@@ -511,30 +782,11 @@ if(earth >= 1)
 	  i += earth; 
 	  coins += earth; 
 	  scoreprogress += earth;
+	  achievement_score(i);
 	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+	  message(i);
 
 	  earthprogress = 0;	  
 	 }
@@ -556,30 +808,11 @@ if(universe >= 1)
 	  i += universe; 
 	  coins += universe; 
 	  scoreprogress += universe;
+	  achievement_score(i);
 	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
+	  message(i);
 
 	  universeprogress = 0;	  
 	 }
@@ -601,31 +834,12 @@ if(grannie >= 1)
 	  i += grannie; 
 	  coins += grannie; 
 	  scoreprogress += grannie;
+	  achievement_score(i);
 	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
-{
-document.getElementById("message").innerHTML = "You are right on Track";
-}
-else if(i > 100 && i < 500)
-{
-document.getElementById("message").innerHTML = "Are you done yet";
-}
-else if(i > 500 && i < 1000)
-{
-document.getElementById("message").innerHTML = "You should just stop now";
-}
-else if(i > 1000 && i < 1249999999999)
-{
-document.getElementById("message").innerHTML = "You got no live";
-}
-else if(i === 1250000000000)
-{
-alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
-location.reload();
-}
-
+	  message(i);
+	  
 	  grannieprogress = 0;	  
 	 }
 }
@@ -646,10 +860,24 @@ if(paapa >= 1)
 	  i += paapa; 
 	  coins += paapa; 
 	  scoreprogress += paapa;
+	  achievement_score(i);
 	  document.getElementById("scoreprogress").value = scoreprogress;	
 	  document.getElementById("score").innerHTML = i;
 	  document.getElementById("coins").innerHTML = coins;
-	  if(i > 10 && i < 100)
+	  message(i);
+
+	  paapaprogress = 0;	  
+	 }
+}
+	  
+
+	  
+}, 100); 
+
+//Message in a bottle
+function message(i){
+
+if(i > 10 && i < 100)
 {
 document.getElementById("message").innerHTML = "You are right on Track";
 }
@@ -661,28 +889,120 @@ else if(i > 500 && i < 1000)
 {
 document.getElementById("message").innerHTML = "You should just stop now";
 }
-else if(i > 1000 && i < 1249999999999)
+else if(i > 1000 && i < 12499999)
 {
 document.getElementById("message").innerHTML = "You got no live";
 }
-else if(i === 1250000000000)
+else if(i === 12500000)
 {
 alert("Well you absolute got no LIVE go outside or give me idea's to help this game - Johan Bos");
 location.reload();
 }
 
-	  paapaprogress = 0;	  
-	 }
 }
-	  
 
-	  
-}, 100); 
+//Achievements for score
+function achievement_score(i){
 
+if(i === 1)
+{
+check_1 = 0
+document.getElementById("Achievement_1").innerHTML = "Your Journey just began";
+document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+setInterval(function() {
 
+if(check_1 === 0)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "Your Journey just began";
+check_1++
+}
+else if(check_1 === 1)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "";
+check_1++
 
+}
+}, 1000); 
 
+}
+if(i >= 1000)
+{
+check_2 = 0
+document.getElementById("Achievement_1000").innerHTML = " 1000 Points of Freedom";
+document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+setInterval(function() {
 
+if(check_2 === 0)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "1000 Points of Freedom";
+check_2++
+}
+else if(check_2 === 1)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "";
+check_2++
+}
+}, 1000); 
+
+}
+if(i >= 10000)
+{
+check_3 = 0
+document.getElementById("Achievement_10000").innerHTML = " The part were you are bored";
+document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+setInterval(function() {
+
+if(check_3 === 0)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "The part were you are bored";
+check_3++
+}
+else if (check_3 === 1) 
+{
+document.getElementById("AchievementUnlocked").innerHTML = "";
+check_3++
+}
+}, 1000); 
+}
+if(i >= 1000000)
+{
+check_4 = 0
+document.getElementById("Achievement_1000000").innerHTML = " You should need a tan";
+document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+setInterval(function() {
+
+if(check_4 === 0)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "You should need a tan";
+check_4++
+}
+else if(check_4 === 1)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "";
+check_4++
+}
+}, 1000); 
+}
+if(i >= 100000000)
+{
+check_5 = 0
+document.getElementById("Achievement_100000000").innerHTML = "You really should stop now";
+document.getElementById("AchievementUnlocked").innerHTML = "Achievement unlocked";
+setInterval(function() {
+
+if(check_5 === 0)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "You really should stop now";
+check_5++
+}
+else if(check_5 === 0)
+{
+document.getElementById("AchievementUnlocked").innerHTML = "";
+check_5++
+}
+}, 1000); 
+}
+}
 
 </script>
 <style>
@@ -703,8 +1023,10 @@ display: inline-block;
 }
 .round-button-circle:hover {
 	background:#30588e;
+	
 }
 .round-button a {
+pointer-events: none;
     display:block;
 	float:left;
 	width:100%;
@@ -746,16 +1068,77 @@ float:left;
 <div id="wrapper">
 <div id="smaller">
 <h1><span style="color:red">Just another click game </span> <small> created by Johan versie 1.3</small></h1>
-<h3>get to 1250000000000 score to win or buy a Johan to get a reward</h3>
+<h3>get to 12500000 score to win or buy a Johan to get a reward</h3>
 <br>
-<div class="round-button"><div class="round-button-circle" onclick="test()"><a class="round-button">Click here!!</a></div></div>
+<div class="round-button"><div class="round-button-circle" onclick="klik()" accesskey="k"><a class="round-button">Click here!!</a></div></div>
 
 <br>
-<h4><div id="message"></div></h4>
-<h4><div id="buyingmessage"></div></h4>
-<h4>Game progress: <progress id="scoreprogress" value="0" max="1250000000000"></progress></h4>
+<h4><span id="message"></span></h4>
+<h4><span id="buyingmessage"></span></h4>
+<h4>Game progress: <progress id="scoreprogress" value="0" max="12500000"></progress></h4>
 <h4>Score:<span id="score">0</span></h4>
 <h4>Coins:<span id="coins">0</span></h4>
+<h4><span id="AchievementUnlocked"></span></h4>
+
+
+<br>
+<br>
+
+<details>
+<summary><span style="font-size: 18pt;"> Achievements </span></summary>
+<h3> Score Achievements </h3>
+<span id = "Achievement_1" style="color:red">Hidden - Get 1 Point</span>
+<br>
+<span id = "Achievement_1000" style="color:red">Hidden - Get 1000 Points</span>
+<br>
+<span id = "Achievement_10000" style="color:red">Hidden - Get 10000 points</span>
+<br>
+<span id = "Achievement_1000000" style="color:red">Hidden - Get 1000000 points</span>
+<br>
+<span id = "Achievement_100000000"style="color:red">Hidden - Get 100000000 points</span>
+<br>
+<h3> Worker Achievements </h3>
+<span id = "Worker_Achievement_1" style="color:red">Hidden - Get 1 worker </span>
+<br>
+<span id = "Worker_Achievement_2" style="color:red">Hidden - Get 1000 workers</span>
+<br>
+<span id = "Factory_Achievement_1" style="color:red">Hidden - Get 1 Factory </span>
+<br>
+<span id = "Factory_Achievement_2" style="color:red">Hidden - Get 1000 Factory</span>
+<br>
+<span id = "Damnation_Achievement_1" style="color:red">Hidden - Get 1 Damnation</span>
+<br>
+<span id = "Damnation_Achievement_2" style="color:red">Hidden - Get 1000 Damnation</span>
+<br>
+<span id = "World_Damnation_Achievement_1" style="color:red">Hidden - Get 1 World Damnation</span>
+<br>
+<span id = "World_Damnation_Achievement_2" style="color:red">Hidden - Get 1000 World Damnation</span>
+<br>
+<span id = "Universial_Airstrike_Achievement_1" style="color:red">Hidden - Get 1 Universial Airstrike</span>
+<br>
+<span id = "Universial_Airstrike_Achievement_2" style="color:red">Hidden - Get 1000 Universial Airstrike</span>
+<br>
+<span id = "Earth_Achievement_1" style="color:red">Hidden - Get 1 Earth</span>
+<br>
+<span id = "Earth_Achievement_2" style="color:red">Hidden - Get 1000 Earth</span>
+<br>
+<span id = "Universe_Achievement_1" style="color:red">Hidden - Get 1 Universe</span>
+<br>
+<span id = "Universe_Achievement_2" style="color:red">Hidden - Get 1000 Universe</span>
+<br>
+<span id = "Grannie_Achievement_1" style="color:red">Hidden - Get 1 Grannie</span>
+<br>
+<span id = "Grannie_Achievement_2" style="color:red">Hidden - Get 1000 Grannie</span>
+<br>
+<span id = "Paapa_Achievement_1" style="color:red">Hidden - Get 1 Paapa</span>
+<br>
+<span id = "Paapa_Achievement_2"  style="color:red">Hidden - Get 1000 Paapa</span>
+<br>
+<span id = "Johan_Achievement_2" style="color:red">Hidden - Get 1 Johan</span>
+
+
+
+</details>
 </div>
 
 <div id="data">
@@ -764,68 +1147,68 @@ float:left;
 <progress id="progressworkers" value="0" max="100"></progress>
 <br>
 <h4>Workers:<span id="workers"> 0</span></h4>
-<button class="btn btn-primary" onclick="buyworkers()">Buy workers 10 coins</button>
+<button class="btn btn-primary" onclick="buyworkers()" accesskey="w" >Buy workers 10 coins</button>
 
 <br><br>
 <progress id="factoryworkers" value="0" max="100"></progress>
 <br>
 
-<h4>Factory:<span id="factory"> 0</span></h4>
-<button class="btn btn-primary" onclick="buyfactory()">Buy factory 100 coins</button>
+<h4>Factory:<span id="factory"> 0</span>  * 2</h4>
+<button class="btn btn-primary" onclick="buyfactory()" accesskey="f">Buy factory 100 coins</button>
 
 <br><br>
 <progress id="damnationworkers" value="0" max="100"></progress>
 <br>
 
-<h4>Damnation:<span id="damnation"> 0</span></h4>
-<button class="btn btn-primary" onclick="buydamnation()">Buy Damnation 1000 coins</button>
+<h4>Damnation:<span id="damnation"> 0</span> * 4</h4>
+<button class="btn btn-primary" onclick="buydamnation()" accesskey="d" >Buy Damnation 1000 coins</button>
 
 <br><br>
 <progress id="world_damnationworkers" value="0" max="100"></progress>
 <br>
 
-<h4>World Damnation:<span id="world_damnation"> 0</span></h4>
-<button class="btn btn-primary" onclick="buyworld_damnation()">Buy World Damnation 1500 coins</button>
+<h4>World Damnation:<span id="world_damnation"> 0</span> * 6</h4>
+<button class="btn btn-primary" onclick="buyworld_damnation()" accesskey="a">Buy World Damnation 1500 coins</button>
 
 <br><br>
 <progress id="universial_airstrikenworkers" value="0" max="100"></progress>
 <br>
 
-<h4>Universial Airstrike:<span id="universial_airstrike"> 0</span></h4>
-<button class="btn btn-primary" onclick="buyuniversial_airstrike()">Buy Universial Airstrike 3000 coins</button>
+<h4>Universial Airstrike:<span id="universial_airstrike"> 0</span> * 8</h4>
+<button class="btn btn-primary" onclick="buyuniversial_airstrike()" accesskey="q">Buy Universial Airstrike 3000 coins</button>
 
 <br><br>
 <progress id="earthworkers" value="0" max="100"></progress>
 <br>
 
-<h4>Earth:<span id="earth"> 0</span></h4>
-<button class="btn btn-primary" onclick="buyearth()">Buy Earth 10000 coins</button>
+<h4>Earth:<span id="earth"> 0</span> * 10</h4>
+<button class="btn btn-primary" onclick="buyearth()" accesskey="e">Buy Earth 10000 coins</button>
 
 <br><br>
 <progress id="universeworkers" value="0" max="100"></progress>
 <br>
 
-<h4>Universe:<span id="universe"> 0</span></h4>
-<button class="btn btn-primary" onclick="buyuniverse()">Buy Universe 50000 coins</button>
+<h4>Universe:<span id="universe"> 0</span> * 12</h4>
+<button class="btn btn-primary" onclick="buyuniverse()" accesskey="u">Buy Universe 50000 coins</button>
 
 <br><br>
 <progress id="grannieworkers" value="0" max="100"></progress>
 <br>
 
-<h4>Grannie:<span id="grannie"> 0</span></h4>
-<button class="btn btn-primary" onclick="buygrannie()">Buy Grannie 75000 coins</button>
+<h4>Grannie:<span id="grannie"> 0</span> * 14</h4>
+<button class="btn btn-primary" onclick="buygrannie()" accesskey="g">Buy Grannie 75000 coins</button>
 
 <br><br>
 <progress id="paapaworkers" value="0" max="100"></progress>
 <br>
 
-<h4>Paapa:<span id="paapa"> 0</span></h4>
-<button class="btn btn-primary" onclick="buypaapa()">Buy Paapa 100000 coins</button>
+<h4>Paapa:<span id="paapa"> 0</span> * 16</h4>
+<button class="btn btn-primary" onclick="buypaapa()" accesskey="p">Buy Paapa 100000 coins</button>
 
 <br>
 
 <h4>Johan The Almighty ONE:<span id="johan"> 0</span></h4>
-<button class="btn btn-success" onclick="buyjohan()">Buy Johan 1000000000000 coins</button>
+<button class="btn btn-success" onclick="buyjohan()" accesskey="j">Buy Johan 1000000000000 coins</button>
 </div>
 </div>
 </body>
