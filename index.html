@@ -83,7 +83,13 @@ function buyworkers(){
 if(coins >= check_coins_workers)
 {
     
-	document.getElementById("buyingmessage").innerHTML = "You bought one worker";
+	
+document.getElementById("buyingmessage").innerHTML = "You bought one worker";
+setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
+	
+	
 	workers++;
 	coins -= check_coins_workers ;
 	check_coins_workers++;
@@ -152,7 +158,14 @@ document.getElementById("workers").innerHTML = workers;
 
 function buyfactory(){
   if(coins >= check_coins_factory) {
-document.getElementById("buyingmessage").innerHTML = "You bought one factory"; 
+  
+
+document.getElementById("buyingmessage").innerHTML = "You bought one factory";
+setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
+
+ 
   factory++;
   check_coins_factory+= 2;
 document.getElementById("increase_factory").innerHTML = check_coins_factory;
@@ -221,6 +234,9 @@ function buydamnation(){
 if(coins >= check_coins_damnation)
 {
 	document.getElementById("buyingmessage").innerHTML = "You bought one damnation";
+	setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
   damnation++;
   
         check_coins_damnation+=3;
@@ -290,6 +306,10 @@ function buyworld_damnation(){
 if(coins >= check_coins_world_damnation)
 {
 	document.getElementById("buyingmessage").innerHTML = "You bought one world damnation";
+	
+	setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
 	world_damnation++;
        
 
@@ -359,6 +379,11 @@ function buyuniversial_airstrike(){
 if(coins >=  check_coins_universial_airstrike)
 {
 	document.getElementById("buyingmessage").innerHTML = "You bought one Universial Airstrike";
+	
+	setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
+ 
 	universial_airstrike++;
        
   
@@ -428,6 +453,10 @@ function buyearth(){
 if(coins >= check_coins_earth)
 {
 	document.getElementById("buyingmessage").innerHTML = "You bought one Earth";
+	setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
+ 
 	earth++;
    
         check_coins_earth+=5;
@@ -495,6 +524,9 @@ function buyuniverse(){
 if(coins >=  check_coins_universe)
 {
 	document.getElementById("buyingmessage").innerHTML = "You bought one Universe";
+	setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
 	universe++;
   
 
@@ -564,6 +596,9 @@ function buygrannie(){
 if(coins >=  check_coins_grannie)
 {
 	document.getElementById("buyingmessage").innerHTML = "You bought one Grannie";
+	setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
 	grannie++;
    
         check_coins_grannie+=7;
@@ -631,6 +666,9 @@ function buypaapa(){
 if(coins >=  check_coins_paapa)
 {
 	document.getElementById("buyingmessage").innerHTML = "You bought one Paapa";
+	setInterval(function(){
+ document.getElementById("buyingmessage").innerHTML = "";
+ }, 3000);
 	paapa++;
   
   check_coins_paapa+=8;
@@ -956,24 +994,24 @@ if(paapa >= 1)
 	  
 }, 100); 
 
-//Message in a bottle
+//Message in a bottle dead code
 function message(i){
 
 if(i > 10 && i < 100)
 {
-document.getElementById("message").innerHTML = "You are right on Track";
+
 }
 else if(i > 100 && i < 500)
 {
-document.getElementById("message").innerHTML = "Are you done yet";
+
 }
 else if(i > 500 && i < 1000)
 {
-document.getElementById("message").innerHTML = "You should just stop now";
+
 }
 else if(i > 1000 && i < 12499999)
 {
-document.getElementById("message").innerHTML = "You got no live";
+
 }
 else if(i === 12500000)
 {
@@ -1154,7 +1192,7 @@ float:left;
 <body onload="load_cookies()">
 <div id="wrapper">
 <div id="smaller">
-<h1><span style="color:red">Just another click game </span> <small> created by Johan versie 1.3</small></h1>
+<h1><span style="color:red">Just another click game </span> <small> created by Johan versie 1.4</small></h1>
 <h3>get to 12500000 score to win or buy a Johan to get a reward</h3>
 <br>
 <div class="round-button"><div class="round-button-circle" onclick="klik()" accesskey="k"><a class="round-button">Click here!!</a></div></div>
@@ -1163,16 +1201,16 @@ float:left;
 <br>
 <br>
 
-Note : Cookies still not working the way i wanted to. Moved on to bigger projects so update had slowed down.
-<button class="btn btn-success" onclick="save_cookies()"  accesskey="d" >Save Game (Creates or Updates Cookies)</button>
-<button class="btn btn-success" onclick="alert_cookies()"  accesskey="d" >Test for cookies</button>
-<br> <b style="color:red;" >No auto save in this game pussy!!</b>
+<span style="color:red;">Important Message : Cookies not supported in Github so development is halted. Busy porting the game to Android and one update is coming soon.</span>
+
+<br>
+
+<h4><span id="message"></span></h4>
 <h4>Game progress: <progress id="scoreprogress" value="0" max="12500000"></progress></h4>
 <h4>Score:<span id="score">0</span></h4>
 <h4>Coins:<span id="coins">0</span></h4>
 <h4><span id="AchievementUnlocked"></span></h4>
 
-<button class="btn btn-danger" onclick="Reset()"  accesskey="d" >Reset Game (Delete Cookies)</button>
 <br>
 <br>
 
@@ -1235,6 +1273,7 @@ Note : Cookies still not working the way i wanted to. Moved on to bigger project
 
 <div id="data">
 <h1>Workers</h1>
+<span id="buyingmessage" style="color:blue;"></span>
 <span id="NoCash" style="color:red;"></span>
 <br><br>
 <progress id="progressworkers" value="0" max="100"></progress>
